@@ -2,13 +2,13 @@ using UnityEngine;
 
 public enum PopupType
 {
-    Notification,
-    Tutorial,
+    Fail,
+    Success,
 }
 public class PopupManager : SingletonNotBaseSource<PopupManager>
 {
-    [SerializeField] private Popup m_NotificationPopupPrefab;
-    [SerializeField] private Popup TutorialPopupPrefab;
+    [SerializeField] private Popup m_FailPopupPrefab;
+    [SerializeField] private Popup SuccessPopupPrefab;
 
     public void ShowPopup(PopupType type, string content, string buttonTextYES)
     {
@@ -17,12 +17,12 @@ public class PopupManager : SingletonNotBaseSource<PopupManager>
 
         switch (type)
         {
-            case PopupType.Notification:
-                prefab = m_NotificationPopupPrefab;
+            case PopupType.Fail:
+                prefab = m_FailPopupPrefab;
                 AudioMainManager.Instance.PlayOnShot(SoundType.Popup);
                 break;
-            case PopupType.Tutorial:
-                prefab = TutorialPopupPrefab;
+            case PopupType.Success:
+                prefab = SuccessPopupPrefab;
                 AudioMainManager.Instance.PlayOnShot(SoundType.Popup);
                 break;
         }

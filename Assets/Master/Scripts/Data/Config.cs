@@ -12,7 +12,7 @@ public class Config
     public const string Step_3 = "Bước 3: Quan sát hiện tượng:\r\nHơi cồn ngưng tụ thành chất lỏng\r\n -> thu được cồn";
 
    
-    public const string Right = "Đã đặt đúng vị trí";
+    public const string Right = "Đã đặt đúng vị trí\r\nHãy tiến hành bước tiếp theo";
     public const string Not_Right = "Đặt sai vị trí rồi";
     public const string Completed = "Hoàn thành thí nghiệm";
 

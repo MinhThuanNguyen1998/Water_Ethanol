@@ -21,7 +21,7 @@ public class DropController : StepBase
     private IEnumerator ShowEndPopupAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        PopupManager.Instance.ShowPopup(PopupType.Notification, Config.Completed, Config.Button_Yes);
+        PopupManager.Instance.ShowPopup(PopupType.Success, Config.Completed, Config.Button_Yes);
     }
 
     public override void FinishStep() => base.FinishStep();

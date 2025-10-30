@@ -48,7 +48,7 @@ public class SetUpLabController : StepBase
     private IEnumerator CoroutineWaitingToFinishStep()
     {
         yield return new WaitForSeconds(m_TimeToFinishStep);
-        PopupManager.Instance.ShowPopup(PopupType.Notification, Config.Right, Config.Button_Yes);
+        PopupManager.Instance.ShowPopup(PopupType.Success, Config.Right, Config.Button_Yes);
         FinishStep();
         
     }
