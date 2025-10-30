@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80a441b91204334dabc962a8fa7417e, type: 3}
+  m_Name: TutorialData
+  m_EditorClassIdentifier: 
+  m_data:
+  - buttonName: Menu
+    buttonContent: "N\xFAt tr\u1EDF v\u1EC1 menu ch\xEDnh c\u1EE7a ph\u1EA7n m\u1EC1m"
+    buttonAudio: {fileID: 8300000, guid: f25967226e070f340a5fc96541a04bca, type: 3}
+  - buttonName: "T\u1EA3i l\u1EA1i th\xED nghi\u1EC7m"
+    buttonContent: "N\xFAt t\u1EA3i l\u1EA1i th\xEC nghi\u1EC7m t\u1EEB \u0111\u1EA7u"
+    buttonAudio: {fileID: 8300000, guid: f4bcdbca7e5ac0a4fb32ad1f0830e212, type: 3}
+  - buttonName: "Chi ti\u1EBFt th\xED nghi\u1EC7m"
+    buttonContent: "N\xFAt hi\u1EC3n th\u1ECB chi ti\u1EBFt t\u1EEBng b\u01B0\u1EDBc
+      \u0111\u1EC3 th\u1EF1c hi\u1EC7n th\xED nghi\u1EC7m trong ph\u1EA7n m\u1EC1m"
+    buttonAudio: {fileID: 8300000, guid: 3a1f85e1c9158c64aa09656adf6934f5, type: 3}
+  - buttonName: "L\xFD thuy\u1EBFt"
+    buttonContent: "N\xFAt hi\u1EC3n th\u1ECB l\xFD thuy\u1EBFt \u0111\u1EC3 th\u1EF1c
+      hi\u1EC7n th\xED nghi\u1EC7m "
+    buttonAudio: {fileID: 8300000, guid: 08dc37fc7959af247a8ded062c47b557, type: 3}
+  - buttonName: "\u0110\xF3ng/M\u1EDF b\xECnh qu\u1EA3 l\xEA"
+    buttonContent: "N\xFAt d\xF9ng \u0111\u1EC3 \u0111\xF3ng m\u1EDF b\xECnh qu\u1EA3
+      l\xEA"
+    buttonAudio: {fileID: 8300000, guid: 428a093af2614f946b75b162acf696c9, type: 3}
+  - buttonName: "Ch\u1EBF \u0111\u1ED9 g\u1EE3i \xFD"
+    buttonContent: "N\xFAt \u0111\u1EC3 b\u1EADt ch\u1EBF \u0111\u1ED9 g\u1EE3i \xFD"
+    buttonAudio: {fileID: 8300000, guid: 61cea1ef78a32af47a28bd8c51bfc87f, type: 3}
+  - buttonName: "B\xECnh ch\u1EE9a"
+    buttonContent: "B\xECnh ch\u1EE9a h\u1ED7n h\u1EE3p d\u1EA7u \u0103n v\xE0 n\u01B0\u1EDBc"
+    buttonAudio: {fileID: 8300000, guid: 1f31c4a47d9b6124bbfcd09b4ba18378, type: 3}
+  - buttonName: "B\xECnh qu\u1EA3 l\xEA"
+    buttonContent: "B\xECnh qu\u1EA3 l\xEA \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng
+      \u0111\u1EC3 t\xE1ch d\u1EA7u v\xE0 n\u01B0\u1EDBc"
+    buttonAudio: {fileID: 8300000, guid: 733689ef46249dd41a88e249775f907f, type: 3}
+  - buttonName: "B\xECnh ch\u1EE9a"
+    buttonContent: "B\xECnh ch\u1EE9a n\u01B0\u1EDBc sau khi t\xE1ch h\u1ED7n h\u1EE3p"
+    buttonAudio: {fileID: 8300000, guid: 6b1200a0ad71bbb4daedb3afea6bf87d, type: 3}
+  - buttonName: "Ph\u1EC5u chi\u1EBFc"
+    buttonContent: "Ph\u1EC5u d\xF9ng \u0111\u1EC3 cho h\u1ED7n h\u1EE3p d\u1EA7u
+      v\xE0 n\u01B0\u1EDBc v\xE0o b\xECnh qu\u1EA3 l\xEA"
+    buttonAudio: {fileID: 8300000, guid: 00cd629e50afe544a92d7d7c2e87050b, type: 3}
+  - buttonName: "Gi\xE1 \u0111\u1EE1"
+    buttonContent: "Gi\xE1 \u0111\u1EE1 b\xECnh qu\u1EA3 l\xEA \u0111\u1EC3 tr\xE1nh
+      g\xE2y \u0111\u1ED5 v\u1EE1 khi th\xED nghi\u1EC7m"
+    buttonAudio: {fileID: 8300000, guid: 242b713aa39241b4495dfd3fed084f49, type: 3}
+  - buttonName: Dung cu 1
+    buttonContent: Noi dung dung cu 1
+    buttonAudio: {fileID: 0}
+  - buttonName: Dung cu 2
+    buttonContent: Noi dung dung cu 2
+    buttonAudio: {fileID: 0}
+  - buttonName: Dung cu 3
+    buttonContent: Noi dung dung cu 3
+    buttonAudio: {fileID: 0}
+  - buttonName: Dung cu 4
+    buttonContent: Noi dung dung cu 4
+    buttonAudio: {fileID: 0}

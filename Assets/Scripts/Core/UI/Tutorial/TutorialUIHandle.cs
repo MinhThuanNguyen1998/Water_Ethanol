@@ -12,43 +12,59 @@ public class TutorialUIHandle : MonoBehaviour
     [SerializeField] private TutorialUI m_tutorialUI;
     [SerializeField] private TextMeshProUGUI m_buttonNameText;
     [SerializeField] private TextMeshProUGUI m_buttonContenText;
+    [SerializeField] private GameObject m_ButtonPrevious;
     [SerializeField] private Canvas canvas;
-    public event Action OnEndTutorial;
+
     private void OnEnable()
     {
         SetUp();
         ShowStep(0);
-
+        ActiveButtonPrev(false);
     }
+
     private void SetUp()
     {
         canvas.worldCamera = Camera.main;
     }
     public void NextStep()
     {
-        //Debug.Log("index:" + index);
         int index = m_tutorialUI.ShowNextStep();
         //ket thuc tutoral
-        if (index == -1) MainManager.Instance.LoadExp();
-        //if (index == -1) TutorialEnd();
         ShowStep(index);
+        ActiveButtonPrev(true);
+        Debug.Log("index:" + index);
+    }
+    public void Skip()
+    {
+        MainManager.Instance.LoadMenu();
+    }
+    public void PreViousStep()
+    {
+        int index = m_tutorialUI.ShowPreViousStep();
+        ShowStep(index);
+        Debug.Log("index:" + index);
     }
     private void ShowStep(int index)
     {
+
         if (index < 0 || index >= tutorialData.Data.Count)
         {
-            MainManager.Instance.LoadMenu();
+            MainManager.Instance.LoadExp();
             return;
         }
+        if (index == 0) ActiveButtonPrev(false);
         var data = tutorialData.Data[index];
         m_buttonNameText.text = data.buttonName;
         m_buttonContenText.text = data.buttonContent;
         AudioMainManager.Instance.PlayAudioIntroduction(data.buttonAudio);
-            
     }
     public void TutorialEnd()
     {
-        OnEndTutorial?.Invoke();
         MainManager.Instance.LoadMenu();
+    }
+
+    private void ActiveButtonPrev(bool isActive)
+    {
+        m_ButtonPrevious.SetActive(isActive);
     }
 }

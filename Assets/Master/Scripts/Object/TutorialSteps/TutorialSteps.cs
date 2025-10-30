@@ -8,7 +8,6 @@ using UnityEngine.Serialization;
 public class TutorialSteps : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI m_TextIntroduction;
     [SerializeField] private List<StepBase> m_ListStepBaseObject;
     private int m_CurrentStep = 0;
     private float m_DelayTimeToShowNextStep = 2f;
@@ -34,14 +33,10 @@ public class TutorialSteps : MonoBehaviour
         {
             step.ResetStep();
         }
-        
     }
-
     private void HandleStepFinished(StepBase finishedStep) => ShowNextStep();
     private void ShowNextStep()
     {
-        m_TextIntroduction.text = Config.GetStepText(m_CurrentStep);
-        AudioMainManager.Instance.PlaySoundByStep(m_CurrentStep);
         m_ListStepBaseObject[m_CurrentStep].StartStep();
         m_CurrentStep++;
     }

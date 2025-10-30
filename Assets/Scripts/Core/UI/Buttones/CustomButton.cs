@@ -5,38 +5,25 @@ using DG.Tweening;
 
 public class CustomButton : Button
 {
-    [Header("Click Animation")]
-    [SerializeField] private float clickScale = 0.9f;   // Scale nhỏ lại khi click
-    [SerializeField] private float tweenDuration = 0.1f;
+    private const float _ClickScale = 0.9f;        // 👈 Thu nhỏ nhẹ khi click
+    private const float _TweenDuration = 0.08f;    // 👈 Thời gian tween ngắn để cảm giác mượt hơn
 
     public override void OnPointerClick(PointerEventData eventData)
     {
         base.OnPointerClick(eventData);
 
-        // 🔊 Phát âm thanh click
-        //AudioManager.Instance?.PlaySFXButtonClick();
+   
 
-        // ✨ Hiệu ứng scale bằng DOTween
-        if (transform != null)
-        {
-            transform.DOScale(clickScale, tweenDuration)
-                .SetEase(Ease.OutQuad)
-                .OnComplete(() =>
-                {
-                    transform.DOScale(1f, tweenDuration).SetEase(Ease.OutBack);
-                });
-        }
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
         base.OnPointerDown(eventData);
-        // Có thể thêm hiệu ứng nhấn xuống nếu muốn
+        // Có thể thêm hiệu ứng khác nếu muốn
     }
 
     public override void OnPointerUp(PointerEventData eventData)
     {
         base.OnPointerUp(eventData);
-        // Có thể thêm hiệu ứng nhả ra
     }
 }
