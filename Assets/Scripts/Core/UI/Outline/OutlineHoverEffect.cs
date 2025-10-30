@@ -9,11 +9,14 @@ public class OutlineHoverEffect: MonoBehaviour
     [Tooltip("Nếu bật, object này là loại có thể di chuyển.")]
     [SerializeField] private bool isMovable = false;
 
+    public bool IsHover { get; set; }
+
     // Shared settings cho toàn project
     private static OutlineSettingsSO sharedSettings;
 
     private void Awake()
     {
+        IsHover = true;
         // Lấy reference Outline
         if (m_outline == null)
             m_outline = GetComponent<Outline>();
@@ -59,11 +62,12 @@ public class OutlineHoverEffect: MonoBehaviour
     }
     private void OnMouseEnter()
     {
+        if (!IsHover) return;
         m_outline.enabled = true;
     }
-
     private void OnMouseExit()
     {
+        if (!IsHover) return;
         m_outline.enabled = false;
     }
 }
