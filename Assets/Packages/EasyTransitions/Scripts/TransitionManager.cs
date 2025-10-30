@@ -205,7 +205,7 @@ namespace EasyTransition
             // ✅ Tạo mới và gán parent là MainManager
             if (currentGOHandle != null)
             {
-                Destroy(currentGOHandle);
+                DestroyImmediate(currentGOHandle);
                 currentGOHandle = null;
             }
             if(menu != null)
@@ -215,9 +215,10 @@ namespace EasyTransition
             currentGOHandle = instance;
 
             if(!instance.activeSelf) instance.SetActive(true);
+            MainManager.Instance.ApplyDisplayMode();
             // Đặt tên rõ ràng
             instance.name = prefab.name + "_Instance";
-            //Debug.Log(transitionTime);
+            Debug.Log(transitionTime);
             template.GetComponent<Transition>().LoadPrefab();
             onTransitionCutPointReached?.Invoke();
 
