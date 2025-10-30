@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SetUpLabController : StepBase
 {
     [SerializeField] private List<MovingObjectByMouse> m_ListObject;
+    [SerializeField] private List<OutlineHoverEffect> m_ListOutLineHoverObject;
     [SerializeField] private List<TriggerPlacer> m_ListTriggerPlacer;
     private int m_PlacedCount = 0;
     private float m_TimeToFinishStep = 2f;
@@ -23,6 +24,7 @@ public class SetUpLabController : StepBase
         base.StartStep();
         CheckListObjectCanMoveByMouse(true);
         ResetOriginalPosMovingObject();
+        ResetOutLineHoverOBject();
         m_PlacedCount = 0;
     }
     public override void FinishStep()
@@ -35,6 +37,7 @@ public class SetUpLabController : StepBase
         base.ResetStep();
         CheckListObjectCanMoveByMouse(false);
         ResetOriginalPosMovingObject();
+        ResetOutLineHoverOBject();
         m_PlacedCount = 0;
     }
     private void HandleObjectPlaced(TriggerPlacer placer)
@@ -63,6 +66,8 @@ public class SetUpLabController : StepBase
     {
         foreach (var objectMoving in m_ListObject) objectMoving.ResetTransform();
     }
-
-    
+    private void ResetOutLineHoverOBject()
+    {
+        foreach(var objectOutline in m_ListOutLineHoverObject) objectOutline.IsHover = true;
+    }
 }
