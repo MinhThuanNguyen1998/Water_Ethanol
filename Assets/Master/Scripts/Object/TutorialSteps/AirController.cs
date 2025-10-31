@@ -48,6 +48,7 @@ public class AirController : StepBase
             yield return null;
         }
         SetMaterial(toMat);
+        yield return new WaitForSeconds(2f);
         FinishStep();
     }
     public override void FinishStep() => base.FinishStep();
