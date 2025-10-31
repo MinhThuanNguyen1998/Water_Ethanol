@@ -11,6 +11,10 @@ public class SetUpLabController : StepBase
     [SerializeField] private List<TriggerPlacer> m_ListTriggerPlacer;
     private int m_PlacedCount = 0;
     private float m_TimeToFinishStep = 2f;
+
+    protected override void OnEnable() => TutorialUIHandle.OnStartIntroductionMode += ResetOutLineHoverObject;
+    protected override void OnDisable() => TutorialUIHandle.OnStartIntroductionMode -= ResetOutLineHoverObject;
+   
     private void Start()
     {
         CheckListObjectCanMoveByMouse(false);
@@ -24,7 +28,7 @@ public class SetUpLabController : StepBase
         base.StartStep();
         CheckListObjectCanMoveByMouse(true);
         ResetOriginalPosMovingObject();
-        ResetOutLineHoverOBject();
+        ResetOutLineHoverObject(true);
         m_PlacedCount = 0;
     }
     public override void FinishStep()
@@ -37,7 +41,7 @@ public class SetUpLabController : StepBase
         base.ResetStep();
         CheckListObjectCanMoveByMouse(false);
         ResetOriginalPosMovingObject();
-        ResetOutLineHoverOBject();
+        ResetOutLineHoverObject(true);
         m_PlacedCount = 0;
     }
     private void HandleObjectPlaced(TriggerPlacer placer)
@@ -66,8 +70,8 @@ public class SetUpLabController : StepBase
     {
         foreach (var objectMoving in m_ListObject) objectMoving.ResetTransform();
     }
-    private void ResetOutLineHoverOBject()
+    private void ResetOutLineHoverObject(bool isHover)
     {
-        foreach(var objectOutline in m_ListOutLineHoverObject) objectOutline.IsHover = true;
+        foreach(var objectOutline in m_ListOutLineHoverObject) objectOutline.IsHover = isHover;
     }
 }

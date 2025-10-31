@@ -15,6 +15,7 @@ public class TutorialUIHandle : MonoBehaviour
     [SerializeField] private GameObject m_ButtonPrevious;
     [SerializeField] private Canvas canvas;
 
+    public static Action <bool> OnStartIntroductionMode;
     private void OnEnable()
     {
         SetUp();
@@ -46,7 +47,7 @@ public class TutorialUIHandle : MonoBehaviour
     }
     private void ShowStep(int index)
     {
-
+        OnStartIntroductionMode?.Invoke(false);
         if (index < 0 || index >= tutorialData.Data.Count)
         {
             MainManager.Instance.LoadExp();
