@@ -2876,7 +2876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9bf0d2ea93c19449ae5dacb29c433a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LevelLiquidVaseControl: {fileID: 0}
+  m_LevelLiquidVaseControl: {fileID: 3020899896069404198}
 --- !u!65 &676535027
 BoxCollider:
   m_ObjectHideFlags: 0
