@@ -20,10 +20,11 @@ public class AudioMainManager : SingletonNotBaseSource<AudioMainManager>
     [SerializeField] private AudioClip m_AudioButtonClip;
     [SerializeField] private AudioClip m_AudioGasIgnitionClip;
     [SerializeField] private AudioClip m_AudioBoilingWater;
+    [SerializeField] private AudioClip m_AudioDoc;
 
     [Header("Audio Tutorials")]
-    [SerializeField] private List<AudioClip> m_ListStepAudioClips; 
     private Dictionary<SoundType, AudioClip> m_SoundMap;
+    private bool isDocPaused = false;
     private void Awake()
     {
         m_SoundMap = new Dictionary<SoundType, AudioClip>
@@ -31,7 +32,7 @@ public class AudioMainManager : SingletonNotBaseSource<AudioMainManager>
             { SoundType.Button, m_AudioButtonClip },
             { SoundType.Popup, m_AudioPopupClip },
             { SoundType.GasIgnition, m_AudioGasIgnitionClip },
-            { SoundType.BoilingWater, m_AudioBoilingWater }
+            { SoundType.BoilingWater, m_AudioBoilingWater },
         };
     }
     public void PlayOnShot(SoundType soundType)
@@ -39,7 +40,6 @@ public class AudioMainManager : SingletonNotBaseSource<AudioMainManager>
         if(m_SoundMap.TryGetValue(soundType, out var clip) && clip != null) m_AudioSource?.PlayOneShot(clip);
         else Debug.LogWarning($"AudioManager: AudioClip for {soundType} is not assigned.");
     }
-
     public void PlayAudioIntroduction(AudioClip clip)
     {
         m_AudioSource.clip = clip;
@@ -63,14 +63,5 @@ public class AudioMainManager : SingletonNotBaseSource<AudioMainManager>
             m_AudioSource.clip = null;
         }
     }
-    public void PlaySoundByStep(int index)
-    {
-        if (m_AudioSource == null) return;
-        if (index >= 0 && index < m_ListStepAudioClips.Count)
-        {
-            var clip = m_ListStepAudioClips[index];
-            if (clip != null) m_AudioSource.PlayOneShot(clip);
-        }
-        else Debug.LogWarning($"AudioManager: Invalid step index {index}.");
-    }
+ 
 }
