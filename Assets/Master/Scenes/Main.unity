@@ -1586,7 +1586,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 615, y: 360}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &328590036
 MonoBehaviour:
@@ -7202,7 +7202,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 615, y: 360}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815051542
 MonoBehaviour:
@@ -7640,7 +7640,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 611.64, y: 340}
-  m_SizeDelta: {x: 50, y: 50}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959224732
 MonoBehaviour:
@@ -15796,14 +15796,14 @@ MonoBehaviour:
   - {fileID: 3808830878107356317}
   listObjectOnLeft: []
   listObjectOnDown:
-  - {fileID: 1324869193}
+  - {fileID: 480660017}
   - {fileID: 699418873}
   - {fileID: 1268505568}
   - {fileID: 263523581}
   - {fileID: 1525433814}
   - {fileID: 2089927859}
+  - {fileID: 1324869193}
   - {fileID: 931400521}
-  - {fileID: 480660017}
   listObjectOnRight:
   - {fileID: 1637957431}
   - {fileID: 1272621995738462329}
