@@ -13,7 +13,9 @@ public class DropController : StepBase
     private Coroutine m_EndPopupCoroutine;
     public override void StartStep()
     {
+
         base.StartStep();
+        VolumeSliderController.OnTimeSliderValueChanged += UpdateDropTime;
         if (m_ArrowDirectionObject != null && m_TargetPosObject != null) m_ArrowDirectionObject.SetPosArrowDirection(m_TargetPosObject);
         m_EndPopupCoroutine = StartCoroutine(ShowEndPopupAfterDelay(m_TimeToDone));
         InvokeRepeating(nameof(DropObject), 0f, m_TimeToCloneDropPrefab);
@@ -23,11 +25,11 @@ public class DropController : StepBase
         yield return new WaitForSeconds(delay);
         PopupManager.Instance.ShowPopup(PopupType.Success, Config.Completed, Config.Button_Yes);
     }
-
     public override void FinishStep() => base.FinishStep();
     public override void ResetStep()
     {
         base.ResetStep();
+        VolumeSliderController.OnTimeSliderValueChanged -= UpdateDropTime;
         CancelInvoke(nameof(DropObject));
         m_LevelLiquidVaseControl.ResetFillLevel();
         if (m_EndPopupCoroutine != null)
@@ -35,6 +37,12 @@ public class DropController : StepBase
             StopCoroutine(m_EndPopupCoroutine);
             m_EndPopupCoroutine = null;
         }
+    }
+    private void UpdateDropTime(float value)
+    {
+        m_TimeToCloneDropPrefab = value;
+        CancelInvoke(nameof(DropObject));
+        InvokeRepeating(nameof(DropObject), m_TimeToCloneDropPrefab, m_TimeToCloneDropPrefab);
     }
     private void DropObject()
     {

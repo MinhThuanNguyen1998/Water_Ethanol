@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Data.Common;
+using UnityEngine;
 
 public class Config 
 {
@@ -22,6 +23,10 @@ public class Config
     // Text Button
     public const string Button_Yes = "Đồng ý";
     public const string Button_No = "Không";
+
+    //Text Slider
+    public const string Slider_Value = "Thời gian nhỏ giọt:";
+    public const string Unit_Time = "s";
 
   
 }
