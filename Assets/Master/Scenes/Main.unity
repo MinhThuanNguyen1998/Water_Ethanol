@@ -1083,8 +1083,8 @@ PrefabInstance:
     - target: {fileID: 5343815886660775649, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_text
       value: "<align=\"center\"><size=40><b><color=#FBEF00>C\xC1C B\u01AF\u1EDAC
-        TH\u1EF0C HI\u1EC6N TH\xCD NGHI\u1EC6M\nT\xC1CH N\u01AF\u1EDAC V\xC0 C\u1ED2N
-        B\u1EB0NG PH\u01AF\u01A0NG PH\xC1P CH\u01AFNG C\u1EA4T</color></b></size></align>"
+        TH\u1EF0C HI\u1EC6N TH\xCD NGHI\u1EC6M\nT\xC1CH N\u01AF\u1EDAC V\xC0 C\u1ED2N(PH\u01AF\u01A0NG
+        PH\xC1P CH\u01AFNG C\u1EA4T)</color></b></size></align>"
       objectReference: {fileID: 0}
     - target: {fileID: 5343815886660775649, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_fontAsset
@@ -5472,15 +5472,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2391386607858182306, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2391386607858182306, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2391386607858182306, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 616.7991
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2391386607858182306, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5652,7 +5652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4968408034984959121, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 616.7991
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4968408034984959121, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5681,8 +5681,8 @@ PrefabInstance:
     - target: {fileID: 5343815886660775649, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_text
       value: "<align=\"center\"><size=40><b><color=#FBEF00>C\xC1C B\u01AF\u1EDAC
-        TH\u1EF0C HI\u1EC6N TH\xCD NGHI\u1EC6M\nT\xC1CH N\u01AF\u1EDAC V\xC0 C\u1ED2N
-        B\u1EB0NG PH\u01AF\u01A0NG PH\xC1P CH\u01AFNG C\u1EA4T</color></b></size></align>"
+        TH\u1EF0C HI\u1EC6N TH\xCD NGHI\u1EC6M\nT\xC1CH N\u01AF\u1EDAC V\xC0 C\u1ED2N(PH\u01AF\u01A0NG
+        PH\xC1P CH\u01AFNG C\u1EA4T)</color></b></size></align>"
       objectReference: {fileID: 0}
     - target: {fileID: 5343815886660775649, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_fontAsset
@@ -5718,15 +5718,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5983776093016808949, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5983776093016808949, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5983776093016808949, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 616.7991
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5983776093016808949, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5734,7 +5734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6192225841514036664, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_Spacing
-      value: 20
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6222238714724687365, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_Spacing
@@ -5746,19 +5746,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6790031728782895133, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6790031728782895133, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6790031728782895133, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 616.7991
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6790031728782895133, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -31.2695
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6891582695454259269, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5832,15 +5832,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7877302339251002786, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7877302339251002786, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7877302339251002786, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 616.7991
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7877302339251002786, guid: 744df84b4698f2f4582cb952f1a61ab5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7010,7 +7010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 38, y: 300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009654943
@@ -17366,7 +17366,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<align=\"center\"><size=40><b><color=#FBEF00>TH\xCD NGHI\u1EC6M: T\xC1CH
-    N\u01AF\u1EDAC V\xC0 C\u1ED2N B\u1EB0NG PH\u01AF\u01A0NG PH\xC1P CH\u01AFNG C\u1EA4T</color></b></size></align>\n\n<size=32><b><color=#FBEF00>1.
+    N\u01AF\u1EDAC V\xC0 C\u1ED2N \n(PH\u01AF\u01A0NG PH\xC1P CH\u01AFNG C\u1EA4T)</color></b></size></align>\n\n<size=32><b><color=#FBEF00>1.
     M\u1EE5c ti\xEAu</color></b></size>\n<size=26>\u2022 Hi\u1EC3u nguy\xEAn t\u1EAFc
     t\xE1ch dung d\u1ECBch d\u1EF1a v\xE0o s\u1EF1 kh\xE1c nhau v\u1EC1 nhi\u1EC7t
     \u0111\u1ED9 s\xF4i.\n\u2022 Bi\u1EBFt thao t\xE1c ch\u01B0ng c\u1EA5t ph\xE2n
