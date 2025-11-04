@@ -11,7 +11,6 @@ public class TutorialSteps : MonoBehaviour
     [SerializeField] private List<StepBase> m_ListStepBaseObject;
     private int m_CurrentStep = 0;
     private float m_DelayTimeToShowNextStep = 2f;
-
     private void OnEnable()
     {
         ShowNextStep();

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class StepTutorialManager : Singleton<StepTutorialManager>
+public class StepTutorialManager : MonoBehaviour
 {
     [SerializeField] private GameObject m_StepTutorialPanel;
     [SerializeField] private List<GameObject> m_ListSteps = new();
@@ -20,6 +20,9 @@ public class StepTutorialManager : Singleton<StepTutorialManager>
 
     private float _DelayShowTutorialIcon = 0f;
     private bool IsFirstTimeShowTutorial = true;
+    private void OnEnable() => StepBase.OnGotoState += GotoState;
+    
+    private void OnDisable() => StepBase.OnGotoState -= GotoState;
 
     private void Start()
     {
