@@ -13,14 +13,6 @@ public class SetUpLabController : StepBase
     private int m_PlacedCount = 0;
     private float m_TimeToFinishStep = 2f;
 
-    protected override void OnEnable()
-    {
-        TutorialUIHandle.OnStartIntroductionMode += ResetOutLineHoverObject;
-    }
-    protected override void OnDisable() 
-    {
-        TutorialUIHandle.OnStartIntroductionMode -= ResetOutLineHoverObject;
-    } 
     private void Start()
     {
         CheckListObjectCanMoveByMouse(true);
