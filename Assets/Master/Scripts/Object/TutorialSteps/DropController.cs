@@ -13,7 +13,13 @@ public class DropController : StepBase
     private Coroutine m_EndPopupCoroutine;
 
     private void Start() => VolumeSliderController.OnTimeSliderValueChanged += SetDefaultDropTime;
-
+    private void OnDestroy()
+    {
+        VolumeSliderController.OnTimeSliderValueChanged -= UpdateDropTime;
+        VolumeSliderController.OnTimeSliderValueChanged -= SetDefaultDropTime;
+        CancelInvoke(nameof(DropObject));
+        if (m_EndPopupCoroutine != null) StopCoroutine(m_EndPopupCoroutine);
+    }
     public override void StartStep()
     {
         base.StartStep();
@@ -27,20 +33,11 @@ public class DropController : StepBase
         yield return new WaitForSeconds(delay);
         PopupManager.Instance.ShowPopup(PopupType.Success, Config.Completed, Config.Button_Yes);
     }
-    public override void FinishStep() => base.FinishStep();
-    public override void ResetStep()
+    public override void FinishStep() 
     {
-        base.ResetStep();
-        VolumeSliderController.OnTimeSliderValueChanged -= UpdateDropTime;
-        VolumeSliderController.OnTimeSliderValueChanged -= SetDefaultDropTime;
-        CancelInvoke(nameof(DropObject));
-        m_LevelLiquidVaseControl.ResetFillLevel();
-        if (m_EndPopupCoroutine != null)
-        {
-            StopCoroutine(m_EndPopupCoroutine);
-            m_EndPopupCoroutine = null;
-        }
+        base.FinishStep();
     }
+  
     private void UpdateDropTime(float value)
     {
         SetDefaultDropTime(value);

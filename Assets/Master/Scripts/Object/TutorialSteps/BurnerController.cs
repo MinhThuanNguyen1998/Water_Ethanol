@@ -34,11 +34,6 @@ public class BurnerController : StepBase
         m_IsCanClickKnob = true;
     }
     public override void FinishStep() => base.FinishStep();
-    public override void ResetStep()
-    {
-        base.ResetStep();
-        ResetKnob();
-    }
     private void Update()
     {
         if (m_IsKnobRotated || !Input.GetMouseButtonDown(0) || !m_IsCanClickKnob) return;

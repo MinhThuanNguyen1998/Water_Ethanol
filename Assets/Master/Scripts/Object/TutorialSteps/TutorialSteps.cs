@@ -14,29 +14,17 @@ public class TutorialSteps : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(DelayShowNextStep());
-    }
-    private IEnumerator DelayShowNextStep()
-    {
-        yield return new WaitForSeconds(m_DelayTimeToShowNextStep);
         ShowNextStep();
     }
+   
     private void Start()
     {
         foreach (var step in m_ListStepBaseObject) step.OnStepFinished += HandleStepFinished;
     }
-
-    public void ResetAllStep()
-    {
-        AudioMainManager.Instance.StopLoop();
-        foreach (var step in m_ListStepBaseObject) 
-        {
-            step.ResetStep();
-        }
-    }
     private void HandleStepFinished(StepBase finishedStep) => ShowNextStep();
     private void ShowNextStep()
     {
+        if (m_CurrentStep >= m_ListStepBaseObject.Count) return;
         m_ListStepBaseObject[m_CurrentStep].StartStep();
         m_CurrentStep++;
     }

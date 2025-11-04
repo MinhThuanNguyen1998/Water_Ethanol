@@ -33,10 +33,10 @@ MonoBehaviour:
   - buttonName: "Ch\u1EC9nh t\u1ED1c \u0111\u1ED9 nh\u1ECF gi\u1ECDt"
     buttonContent: "N\xFAt d\xF9ng ch\u1EC9nh t\u1ED1c \u0111\u1ED9 nh\u1ECF gi\u1ECDt"
     buttonAudio: {fileID: 8300000, guid: 9a52831a4ebe1714eb7ac24cf5e15058, type: 3}
-  - buttonName: "B\xECnh ng\u01B0ng"
-    buttonContent: "N\u01A1i ch\u1EE9a ph\u1EA7n ch\u1EA5t l\u1ECFng \u0111\xE3 \u0111\u01B0\u1EE3c
-      ng\u01B0ng t\u1EE5"
-    buttonAudio: {fileID: 8300000, guid: 00d0b3b4c04447249827c35065409fd0, type: 3}
+  - buttonName: "N\u1ED3i"
+    buttonContent: "D\xF9ng \u0111\u1EC3 ch\u1EE9a h\u1ED7n h\u1EE3p v\xE0 \u0111un
+      n\xF3ng"
+    buttonAudio: {fileID: 8300000, guid: 76f290a1837bbe340bcff92719342d1b, type: 3}
   - buttonName: "B\u1EBFp ga"
     buttonContent: "D\xF9ng \u0111\u1EC3 \u0111un n\xF3ng h\u1ED7n h\u1EE3p n\u01B0\u1EDBc
       v\xE0 c\u1ED3n"
@@ -56,11 +56,11 @@ MonoBehaviour:
   - buttonName: "\u1ED0ng d\u1EABn n\u01B0\u1EDBc ra sinh h\xE0n"
     buttonContent: "D\xF9ng \u0111\u1EC3 tho\xE1t n\u01B0\u1EDBc n\xF3ng"
     buttonAudio: {fileID: 8300000, guid: 04c61319d85e59144971564594bfbf2e, type: 3}
+  - buttonName: "B\xECnh ng\u01B0ng"
+    buttonContent: "N\u01A1i ch\u1EE9a ph\u1EA7n ch\u1EA5t l\u1ECFng \u0111\xE3 \u0111\u01B0\u1EE3c
+      ng\u01B0ng t\u1EE5"
+    buttonAudio: {fileID: 8300000, guid: 00d0b3b4c04447249827c35065409fd0, type: 3}
   - buttonName: "Gi\xE1 \u0111\u1EE1"
     buttonContent: "D\xF9ng \u0111\u1EC3 c\u1ED1 \u0111\u1ECBnh v\xE0 gi\u1EEF c\xE1c
       d\u1EE5ng c\u1EE5 th\xED nghi\u1EC7m"
     buttonAudio: {fileID: 8300000, guid: 37fafe392df6f1b44b5635b0ad154142, type: 3}
-  - buttonName: "N\u1ED3i"
-    buttonContent: "D\xF9ng \u0111\u1EC3 ch\u1EE9a h\u1ED7n h\u1EE3p v\xE0 \u0111un
-      n\xF3ng"
-    buttonAudio: {fileID: 8300000, guid: 76f290a1837bbe340bcff92719342d1b, type: 3}

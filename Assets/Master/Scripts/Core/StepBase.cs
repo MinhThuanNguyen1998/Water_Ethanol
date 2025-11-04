@@ -17,7 +17,7 @@ public abstract class StepBase : MonoBehaviour, IStep
     public virtual void StartStep()
     {
         IsFinished = false;
-        StepTutorialManager.Instance.GotoState(StepID);
+        //StepTutorialManager.Instance.GotoState(StepID);
     }
     public virtual void FinishStep()
     {

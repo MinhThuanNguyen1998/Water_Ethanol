@@ -52,16 +52,6 @@ public class AirController : StepBase
         FinishStep();
     }
     public override void FinishStep() => base.FinishStep();
-    public override void ResetStep()
-    {
-        base.ResetStep();
-        if (m_ChangeMaterialCoroutine != null)
-        {
-            StopCoroutine(m_ChangeMaterialCoroutine);
-            m_ChangeMaterialCoroutine = null;
-        }
-        ResetEffect();
-    }
     private void SetMaterial(Material material)
     {
         if (m_ListRenderer == null) return;

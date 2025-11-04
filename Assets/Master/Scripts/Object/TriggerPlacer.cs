@@ -6,7 +6,6 @@ public class TriggerPlacer : MonoBehaviour
     [SerializeField] private string m_TagName;   
     [SerializeField] private Transform m_Target;
 
-    private bool m_IsPlaced = false;
     public event System.Action<TriggerPlacer> OnObjectPlaced;
     private float m_TimeToMoveToPlacer = 0.2f;
     private float m_TimeToStopOutline = 0.5f;
@@ -18,7 +17,6 @@ public class TriggerPlacer : MonoBehaviour
             var mover = other.GetComponent<MovingObjectByMouse>();
             StartCoroutine(CoroutineSmoothMove(other.transform, m_Target.position, m_TimeToMoveToPlacer));
             mover.CheckMovingObjectByMouse(false);
-            m_IsPlaced = true;
             StartCoroutine(CoroutineDisableOutlineAfterDelay(other));
             OnObjectPlaced?.Invoke(this);
            

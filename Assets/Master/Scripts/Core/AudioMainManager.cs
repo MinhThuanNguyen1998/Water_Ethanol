@@ -20,7 +20,6 @@ public class AudioMainManager : SingletonNotBaseSource<AudioMainManager>
     [SerializeField] private AudioClip m_AudioButtonClip;
     [SerializeField] private AudioClip m_AudioGasIgnitionClip;
     [SerializeField] private AudioClip m_AudioBoilingWater;
-    [SerializeField] private AudioClip m_AudioDoc;
 
     [Header("Audio Tutorials")]
     private Dictionary<SoundType, AudioClip> m_SoundMap;

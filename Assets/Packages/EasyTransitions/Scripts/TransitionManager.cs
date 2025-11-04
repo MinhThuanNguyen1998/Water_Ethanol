@@ -218,7 +218,7 @@ namespace EasyTransition
             MainManager.Instance.ApplyDisplayMode();
             // Đặt tên rõ ràng
             instance.name = prefab.name + "_Instance";
-            Debug.Log(transitionTime);
+            //Debug.Log(transitionTime);
             template.GetComponent<Transition>().LoadPrefab();
             onTransitionCutPointReached?.Invoke();
 

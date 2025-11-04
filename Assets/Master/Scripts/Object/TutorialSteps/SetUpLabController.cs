@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +13,17 @@ public class SetUpLabController : StepBase
     private int m_PlacedCount = 0;
     private float m_TimeToFinishStep = 2f;
 
-    protected override void OnEnable() => TutorialUIHandle.OnStartIntroductionMode += ResetOutLineHoverObject;
-    protected override void OnDisable() => TutorialUIHandle.OnStartIntroductionMode -= ResetOutLineHoverObject;
-   
+    protected override void OnEnable()
+    {
+        TutorialUIHandle.OnStartIntroductionMode += ResetOutLineHoverObject;
+    }
+    protected override void OnDisable() 
+    {
+        TutorialUIHandle.OnStartIntroductionMode -= ResetOutLineHoverObject;
+    } 
     private void Start()
     {
-        CheckListObjectCanMoveByMouse(false);
+        CheckListObjectCanMoveByMouse(true);
         foreach (var placer in m_ListTriggerPlacer)
         {
             placer.OnObjectPlaced += HandleObjectPlaced;
@@ -26,23 +32,14 @@ public class SetUpLabController : StepBase
     public override void StartStep()
     {
         base.StartStep();
-        CheckListObjectCanMoveByMouse(true);
-        ResetOriginalPosMovingObject();
-        ResetOutLineHoverObject(true);
         m_PlacedCount = 0;
+        CheckListObjectCanMoveByMouse(true);
+       
     }
     public override void FinishStep()
     {
         base.FinishStep();
         CheckListObjectCanMoveByMouse(false);
-    }
-    public override void ResetStep()
-    {
-        base.ResetStep();
-        CheckListObjectCanMoveByMouse(false);
-        ResetOriginalPosMovingObject();
-        ResetOutLineHoverObject(true);
-        m_PlacedCount = 0;
     }
     private void HandleObjectPlaced(TriggerPlacer placer)
     {
@@ -57,7 +54,6 @@ public class SetUpLabController : StepBase
         yield return new WaitForSeconds(m_TimeToFinishStep);
         PopupManager.Instance.ShowPopup(PopupType.Success, Config.Right, Config.Button_Yes);
         FinishStep();
-        
     }
     private void CheckListObjectCanMoveByMouse(bool isMovingByMouse)
     {
