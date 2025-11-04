@@ -15,19 +15,19 @@ public class TriggerPlacer : MonoBehaviour
         {
             //Debug.Log("TriggerPlacer: OnTriggerEnter" + m_TagName);
             var mover = other.GetComponent<MovingObjectByMouse>();
+            var outline = other.GetComponent<OutlineHoverEffect>();
             StartCoroutine(CoroutineSmoothMove(other.transform, m_Target.position, m_TimeToMoveToPlacer));
             mover.CheckMovingObjectByMouse(false);
             StartCoroutine(CoroutineDisableOutlineAfterDelay(other));
             OnObjectPlaced?.Invoke(this);
-           
         }
     }
     private IEnumerator CoroutineDisableOutlineAfterDelay(Collider other)
     {
         yield return new WaitForSeconds(m_TimeToStopOutline);
 
-        var outline = other.GetComponent<OutlineHoverEffect>();
-        outline.IsHover = false;
+        var outline = other.GetComponent<Outline>();
+        outline.OutlineWidth = 0;
     }
     
     private IEnumerator CoroutineSmoothMove(Transform obj, Vector3 targetPos, float duration)
